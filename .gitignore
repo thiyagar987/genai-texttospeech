@@ -1,0 +1,28 @@
+# Virtual environment
+genai-doc-assistant/
+venv/
+.venv/
+env/
+
+# Environment variables
+.env
+.env.local
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Generated audio files
+data/*.mp3
+data/*.wav
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Streamlit
+.streamlit/secrets.toml
