@@ -7,11 +7,11 @@ from app.utils.helpers import truncate_text, read_audio_bytes
 
 st.set_page_config(page_title="Text Translator & Speech", page_icon="🌐", layout="centered")
 
-st.title("🌐 Text Translator & Text-to-Speech")
+st.title("Text Translator & Text-to-Speech")
 st.markdown("Translate text into multiple languages and listen to the audio output.")
 
 # --- Input section ---
-st.subheader("1. Provide Input Text")
+st.subheader("Provide Input Text")
 input_mode = st.radio("Choose input method:", ["Type Text", "Upload File"], horizontal=True)
 
 input_text = ""
@@ -32,12 +32,12 @@ else:
             st.error(f"Failed to read file: {e}")
 
 # --- Language selection ---
-st.subheader("2. Select Target Language")
+st.subheader("Select Target Language")
 language_name = st.selectbox("Translate to:", list(SUPPORTED_LANGUAGES.keys()), index=8)
 language_code = SUPPORTED_LANGUAGES[language_name]
 
 # --- Translate button ---
-st.subheader("3. Translate & Generate Audio")
+st.subheader("Translate & Generate Audio")
 if st.button("Translate", use_container_width=True, type="primary"):
     if not input_text.strip():
         st.warning("Please provide some text before translating.")
